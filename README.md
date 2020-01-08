@@ -1,4 +1,7 @@
-# node-red-contrib-bme280
+# node-red-contrib-bme280-forced
+
+# A modification of https://flows.nodered.org/node/node-red-contrib-bme280 to use BME280 in forced mode.
+
 
 A node-red custom node wrapper for the nodejs [bme280-sensor](https://github.com/skylarstein/bme280-sensor). by @skylarstein . This library uses the outstanding package [i2c-bus](https://github.com/fivdi/i2c-bus) that enable the communication with I2C devices in most common Linux SBCs. Raspberry Pi, C.H.I.P., BeagleBone, Orange Pi,  or Intel Edison are supported by this package.
 
@@ -39,7 +42,7 @@ After installation place your Bme280 node in any of your flow and configure the 
 4. __Extra:__ Check box to indicate the node to compute extra information each time a read is requested.
 
 
-After configuration and deployment the node will init the sensor and will identify if BME280 or BMP280 variant is detected.  
+After configuration and deployment the node will init the sensor and will identify if BME280 or BMP280 variant is detected.
 
 ### Reading Sensor Data
 As in other node-red nodes the actual measurement of sensor data require that an input msg arrive to the node. The input called __Trigger__ will start the reading of sensor data will send the data in the node's output. The input __msg is reused__ so any property on the input msg (with the exception of payload and topic if set) will be redirected without modification to the output.
